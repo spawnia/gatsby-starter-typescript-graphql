@@ -1,7 +1,5 @@
 # gatsby-starter-typescript-graphql
 
-> Gatsby starter with typesafe GraphQL using TypeScript
-
 This is a starter kit for [Gatsby.js](https://www.gatsbyjs.org/) websites written in TypeScript.
 It leverages [GraphQL Code Generator](https://graphql-code-generator.com/) to enable typesafe GraphQL queries.
 
@@ -51,11 +49,3 @@ Generate GraphQL type definitions
 ```bash
 yarn codegen
 ```
-
-## Credits
-
-Built with [Gatsby](https://www.gatsbyjs.org/) - the blazing-fast static site generator for [React](https://facebook.github.io/react/).
-
-## Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/spawnia/graphql-starter-typescript-graphql)
