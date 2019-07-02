@@ -49,3 +49,14 @@ Generate GraphQL type definitions
 ```bash
 yarn codegen
 ```
+
+# Query the GitHub GraphQL API
+
+By default, this starter adds the [GitHub GraphQL API](https://developer.github.com/v4/) as a source.
+This can be quite useful for personal sites or blogs to show off your projects.
+
+To connect with the GitHub API, you will need to add an environment variable.
+
+```bash
+cp .env.development.example .env.example
+```
