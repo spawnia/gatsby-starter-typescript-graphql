@@ -46,16 +46,12 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.14.2",
     "eslint-plugin-standard": "^4.0.0",
+    "husky": "^3.0.0",
+    "lint-staged": "^9.0.1",
     "prettier": "^1.18.2",
     "typescript": "^3.5.2",
     "typescript-styled-plugin": "^0.14.0"
   },
-  "keywords": [
-    "gatsby",
-    "typescript",
-    "graphql"
-  ],
-  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "yarn run start",
@@ -67,6 +63,31 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "codegen": "graphql-codegen --config graphql-codegen.yml"
   },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --ignore-path .gitignore --ignore-path .prettierignore --fix",
+      "git add"
+    ],
+    "*.{md,yaml,yml}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.svg": [
+      "svgo --pretty --indent=2 --config=svgo.yml --multipass",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "keywords": [
+    "gatsby",
+    "typescript",
+    "graphql"
+  ],
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/spawnia/gatsby-starter-typescript-graphql"
