@@ -1,7 +1,7 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import { ExampleImageQuery } from "../graphql"
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import { ExampleImageQuery } from '../graphql'
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -27,7 +27,6 @@ const Image = () => {
     }
   `)
 
-  // @ts-ignore
   return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
 }
 

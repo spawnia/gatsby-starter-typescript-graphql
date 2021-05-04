@@ -1,7 +1,7 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import { PinnedReposQuery } from "../graphql"
-import { notEmpty } from "../typeHelpers"
+import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+import { PinnedReposQuery } from '../graphql'
+import { notEmpty } from '../typeHelpers'
 
 export const Repositories = () => {
   const repos: PinnedReposQuery = useStaticQuery(graphql`
@@ -27,6 +27,7 @@ export const Repositories = () => {
       }
     }
   `)
+
   return (
     <section>
       {repos.github!.viewer.pinnedItems.nodes!.filter(notEmpty).map((repo) => (

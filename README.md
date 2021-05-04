@@ -7,8 +7,8 @@ It leverages [GraphQL Code Generator](https://graphql-code-generator.com/) to en
 
 - Type safety with [TypeScript](https://www.typescriptlang.org/)
 - Typesafe GraphQL with [graphql-codegen](https://graphql-code-generator.com/)
-- [ESLint](https://eslint.org/) with [TypeScript support](https://typescript-eslint.io/)
-- Styling with [styled-components](https://emotion.sh/)
+- Best practices with [ESLint](https://eslint.org/)
+- Styling with [styled-components](https://styled-components.com/)
 
 ## Setup
 
@@ -23,6 +23,17 @@ Create a new site
 ```bash
 gatsby new <PROJECT_NAME> https://github.com/spawnia/gatsby-starter-typescript-graphql
 ```
+
+By default, this starter adds the [GitHub GraphQL API](https://developer.github.com/v4/) as a source.
+This can be quite useful for personal sites or blogs to show off your projects.
+
+To connect with the GitHub API, you will need to add a personal access token to your environment:
+
+```bash
+cp .env.development.example .env.example
+```
+
+If you do not want to try this feature, remove `src/components/repositories.tsx` and its usages.
 
 ## Usage
 
@@ -48,15 +59,4 @@ Generate GraphQL type definitions
 
 ```bash
 yarn codegen
-```
-
-# Query the GitHub GraphQL API
-
-By default, this starter adds the [GitHub GraphQL API](https://developer.github.com/v4/) as a source.
-This can be quite useful for personal sites or blogs to show off your projects.
-
-To connect with the GitHub API, you will need to add an environment variable.
-
-```bash
-cp .env.development.example .env.example
 ```
